@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://kit.fontawesome.com/6176231e60.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <audio id="bg-music" autoplay loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-dubstep.mp3" type="audio/mp3">
+    </audio>
+  
+    <div class="container">
+      <img src="./images/f1_2-removebg-preview.png" class="car-img" alt="Red Bull Car">
+      <div class="intro">Start your engines... Something special is waiting!</div>
+      <button class="start-btn" onclick="showMessage()">Start the Engine</button>
+      <div class="message" id="message">
+              <div class="greetings">
+                <span>🏁</span>
+                  <span>H</span>
+                  <span>A</span>
+                  <span>P</span>
+                  <span>P</span>
+                  <span>Y</span>
+              </div>
+              <div class="greetings">
+                  <span>B</span>
+                  <span>I</span>
+                  <span>R</span>
+                  <span>T</span>
+                  <span>H</span>
+                  <span>D</span>
+                  <span>A</span>
+                  <span>Y</span>
+              </div>
+              <div class="greetings">
+                  <span>L</span>
+                  <span>O</span>
+                  <span>V</span>
+                  <span>E</span>
+                  <span>🏏</span><br></div>
+        <!-- 🏁 Happy Birthday, Champ! 🏏<br> -->
+        Just like Red Bull, you never slow down.<br>
+        May your year be filled with wins, sixers, and endless joy! 🎉❤️<br><br>
+        <a href="./heart.html" class="start-btn" onclick="showGallery()">For more Surprise <i class="fa-solid fa-arrow-right"></i></a><br><br>
+        
+      </div>
+    </div>
+    <canvas class="confetti" id="confetti"></canvas>
+    <script src="./script.js" defer></script>
+  </main>
+</body>
+</html>

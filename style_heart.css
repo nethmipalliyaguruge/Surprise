@@ -1,0 +1,137 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: pulse 1s ease-in-out infinite;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -50px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: 50px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(-45deg);
+    }
+    100% {
+      transform: scale(1) rotate(-45deg);
+    }
+  }
+
+.msg{
+    margin-top: 3rem;
+    margin-left: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    line-height: 1.5;
+  }
+  
+  @keyframes floatUp {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.fa-solid{
+    font-size: 5rem;
+    color: #fff;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    animation: floatUp 8s infinite ease-in ;
+    cursor: pointer;
+  }
+  
+  .fa-solid :hover {
+    color: #ff0000;
+  }
+  
+  .fa-solid :active {
+    transform: scale(0.9);
+  }
+
+  @media (max-width: 600px) {
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heart {
+      width: 70px;
+      height: 60px;
+    }
+  
+    .heart::before,
+    .heart::after {
+      width: 70px;
+      height: 60px;
+    }
+  
+    .heart::before {
+      top: -35px;
+    }
+  
+    .heart::after {
+      left: 35px;
+    }
+  
+    .msg {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+  
+    .fa-solid {
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .fa-solid{
+        font-size: 2.5rem;
+        color: #fff;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        animation: floatSide 30s infinite ease-in ;
+        cursor: pointer;
+    }
+    
+    @keyframes floatSide  {
+        0% { transform: translateX(-90vw); opacity: 1; }
+        50% { transform: translateX(90vw); opacity: 0.6; }
+        100% { transform: translateX(-90vw); opacity: 1; }
+      }
+    
+  }

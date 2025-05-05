@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(135deg, #000000, #004e92);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    overflow-x: hidden;
+  }
+  .container {
+    text-align: center;
+    padding: 2rem;
+  }
+  .intro {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+  .start-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+  }
+  .start-btn:hover {
+    background: #ffaa00;
+  }
+  .message {
+    display: none;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  
+  .confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .balloon {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: floatUp 6s infinite ease-in;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-120vh); opacity: 0; }
+  }
+  .car-img {
+    width: 300px;
+    margin: 2rem auto;
+    display: block;
+    opacity: 70%;
+    animation: slideCar 2s ease-out;
+  }
+  @keyframes slideCar {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(0); }
+  }
+ 
+
+  audio {
+    display: none;
+  }
+  .greetings span {
+    display: inline-block;
+    font-size: 4rem;
+    color: #ffffff;
+    animation: bounce 0.5s infinite alternate;
+  }
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+  }
+  .greetings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e6faff;
+  text-align: center;
+  text-shadow:
+      0 0 5px #e6faff,
+      0 0 10px #a1ecff,
+      0 0 20px #a1ecff,
+      0 0 30px #80eaff,
+      0 0 40px #80eaff,
+      0 0 60px #80eaff,
+      0 0 80px #80eaff;
+  animation: flicker 1.5s infinite alternate;
+      margin-top: 2rem;
+  }
+  .greetings span:nth-child(1) { animation-delay: 0s; }
+  .greetings span:nth-child(2) { animation-delay: 0.1s; }
+  .greetings span:nth-child(3) { animation-delay: 0.2s; }
+  .greetings span:nth-child(4) { animation-delay: 0.3s; }
+  .greetings span:nth-child(5) { animation-delay: 0.4s; }
+  .greetings span:nth-child(6) { animation-delay: 0.5s; }
+  .greetings span:nth-child(7) { animation-delay: 0.6s; }
+  .greetings span:nth-child(8) { animation-delay: 0.7s; }
+  .greetings span:nth-child(9) { animation-delay: 0.8s; }
+  .greetings span:nth-child(10) { animation-delay: 0.9s; }
+  .greetings span:nth-child(11) { animation-delay: 1s; }
+  .greetings span:nth-child(12) { animation-delay: 1.1s; }
+
+  
+  
+  
+  @media (max-width: 600px) {
+    .intro {
+      font-size: 1.3rem;
+    }
+  
+    .start-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+  
+    .message {
+      font-size: 1.2rem;
+    }
+  
+    .greetings span {
+      font-size: 1.5rem;
+    }
+  
+    .video-link {
+      font-size: 1rem;
+    }
+  }
