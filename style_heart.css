@@ -12,6 +12,20 @@ body {
     flex-direction: row;
     align-items: center;
   }
+  p {
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 3rem;
+    animation: floatUp 8s ease-out, fadeOut 1s ease-out 7s forwards;
+  }
+  @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
   .heart {
     position: relative;
     width: 100px;
